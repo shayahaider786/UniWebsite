@@ -15,6 +15,7 @@
                     @endif
  
                     <h2>You are a Admin User.</h2>
+                    <a href="{{route('admin.dashboard')}}">Admin Dashboard</a>
                 </div>
             </div>
         </div>
