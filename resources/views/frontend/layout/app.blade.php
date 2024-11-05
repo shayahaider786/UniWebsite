@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -43,10 +44,10 @@
 
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+        <nav class="navbar navbar-expand-lg backgrounNav navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="{{route('index')}}" class="navbar-brand w-25">
                 {{-- <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kider</h1> --}}
-              <img src="frontend/img/assets/logo2.png" alt="logo" width="30%">
+              <img src="/frontend/img/assets/logo3.png" alt="logo" class="p-2" width="30%">
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -55,16 +56,17 @@
                 <div class="navbar-nav mx-auto">
                     <a href="{{route('index')}}" class="nav-item nav-link active">Home</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">About</a>
+                        <a class="nav-link dropdown-toggle" href="{{ route('about') }}" aria-expanded="false">
+                            About
+                          </a>   
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">Principal Message</a>
-                            <a href="team.html" class="dropdown-item">Vision & Mission</a>
-                            <a href="call-to-action.html" class="dropdown-item">Adiministration</a>
-                            <a href="call-to-action.html" class="dropdown-item">Faclities</a>
-                            <a href="call-to-action.html" class="dropdown-item">Trustees</a>
+                            <a href="{{ route('principalMessage') }}" class="dropdown-item">Principal Message</a>
+                            <a href="{{route('missionVission')}}" class="dropdown-item">Vision & Mission</a>
+                            <a href="{{route('allAdministration')}}" class="dropdown-item">Administration</a>
+                            <a href="{{route('facilities')}}" class="dropdown-item">Facilities</a>
+                            <a href="{{route('trustees')}}" class="dropdown-item">Trustees</a>
                         </div>
                     </div>
-                    <a href="classes.html" class="nav-item nav-link">Administration</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admision</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
@@ -81,7 +83,7 @@
                     <a href="classes.html" class="nav-item nav-link">Career</a>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+                {{-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a> --}}
             </div>
         </nav>
         <!-- Navbar End -->
@@ -91,7 +93,7 @@
 
 
         <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container-fluid backgrounNav text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
             <div class="container py-5">
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">

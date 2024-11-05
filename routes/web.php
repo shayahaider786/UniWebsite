@@ -14,6 +14,12 @@ Auth::routes();
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
+Route::get('/principal-message', [FrontendController::class, 'principalMessage'])->name('principalMessage');
+Route::get('/mission-vission', [FrontendController::class, 'missionVission'])->name('missionVission');
+Route::get('/administrations', [FrontendController::class, 'allAdministration'])->name('allAdministration');
+Route::get('/administrations/{slug}', [FrontendController::class, 'administrationPerson'])->name('administrationPerson');
+Route::get('/facilities', [FrontendController::class, 'facilities'])->name('facilities');
+Route::get('/trustees', [FrontendController::class, 'trustees'])->name('trustees');
 /*------------------------------------------
 --------------------------------------------
 All Normal Users Routes List

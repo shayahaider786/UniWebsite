@@ -8,8 +8,7 @@
                 <h1 class="display-2 text-white animated slideInDown mb-4">About Us</h1>
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item"><a href="{{route('about')}}">Home</a></li>
                         <li class="breadcrumb-item text-white active" aria-current="page">About Us</li>
                     </ol>
                 </nav>
@@ -22,124 +21,45 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos, ipsum labore duo duo sit no sea diam. Et dolor et kasd ea. Eirmod diam at dolor est vero nonumy magna.</p>
-                        <div class="row g-4 align-items-center">
-                            <div class="col-sm-6">
-                                <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
+                    <div class="col-lg-12 wow  fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-4 text-center">History of the Institution</h1>
+                        <div class="row mt-5">
+                            <div class="col-md-6">
+                                <p class="mb-3 alignPara">
+                                    Founded in 1998, SEC has a legacy of delivering quality education and fostering a supportive learning environment. We continually evolve to meet the educational needs of our community, ensuring students have access to excellent resources and guidance. Our school aims to cultivate a passion for lifelong learning, preparing students for both academic and personal success.                                </p>
+                                <p class="mb-3 alignPara">
+                                    In addition to our national affiliations, SEC has also partnered with the British Council. This international affiliation enables us to provide students with access to globally recognized programs, opening doors to educational and career opportunities beyond local boundaries. The British Council affiliation underscores our commitment to a well-rounded education that prepares students to thrive in a globalized world.
+                                </p>
+                                <p class="mb-3 alignPara">
+                                    At SEC, our teaching staff is dedicated to creating an environment where every student feels valued and supported. Our educators are not only highly qualified but also passionate about making a difference in their students' lives. We believe that with the right guidance and encouragement, each student can unlock their potential and achieve their dreams.
+                                </p>
+                                <p class="mb-3 alignPara">
+                                    Parents are considered essential partners in the SEC community. We maintain open lines of communication with families and encourage parental involvement in school events and activities. This partnership between school and home plays a crucial role in supporting each student's journey toward academic and personal growth.
+                                </p>
                             </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle flex-shrink-0" src="frontend/img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                    <div class="ms-3">
-                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                        <small>CEO & Founder</small>
-                                    </div>
-                                </div>
+                            <div class="col-md-6">
+                                <p class="mb-3 alignPara">
+                                    As an institution, SEC is proudly affiliated with the Board of Intermediate & Secondary Education in Lahore. This affiliation allows us to offer a curriculum that aligns with national standards and ensures that our students are well-prepared for examinations at both intermediate and secondary levels. Through this partnership, we maintain a high standard of education, aiming to bring out the best in each of our students.
+                                </p>
+                                <p class="mb-3 alignPara">
+                                    We offer a variety of programs and extracurricular activities designed to nurture the diverse talents and interests of our students. From academic clubs to sports teams, SEC provides opportunities for students to develop skills that go beyond the classroom. These activities help students build confidence, teamwork skills, and resilience, which are essential for their future endeavors.
+                                </p>
+                                
+                                <p class="mb-3 alignPara">
+                                    Our school is also committed to staying at the forefront of educational innovation. We incorporate modern teaching methods and technology in our classrooms to enhance the learning experience. By blending traditional values with modern practices, SEC ensures that students receive a balanced education that prepares them for the challenges of the 21st century.
+                                </p>
+                                <p class="mb-3 alignPara">
+                                    Looking to the future, SEC remains dedicated to expanding its impact and continuing its mission of educational excellence. We aspire to nurture generations of students who are not only academically accomplished but also socially responsible and globally aware. At SEC, we are building a brighter tomorrow by empowering the leaders of tomorrow.
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="frontend/img/about-1.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/about-2.jpg" alt="">
-                            </div>
-                            <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/about-3.jpg" alt="">
-                            </div>
-                        </div>
+                    <div class="col-lg-12 about-img wow fadeInUp" data-wow-delay="0.5s">
+                        <img class="img-fluid" src="frontend/img/assets/image1.jpg" width="100%" alt="image1">
                     </div>
                 </div>
             </div>
         </div>
         <!-- About End -->
-
-
-        <!-- Call To Action Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded" src="frontend/img/call-to-action.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Become A Teacher</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
-                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                                </p>
-                                <a class="btn btn-primary py-3 px-5" href="">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Call To Action End -->
-
-
-        <!-- Team Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Popular Teachers</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit
-                        eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="frontend/img/team-1.jpg" alt="">
-                            <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
-                                <div class="d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="frontend/img/team-2.jpg" alt="">
-                            <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
-                                <div class="d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-item position-relative">
-                            <img class="img-fluid rounded-circle w-75" src="frontend/img/team-3.jpg" alt="">
-                            <div class="team-text">
-                                <h3>Full Name</h3>
-                                <p>Designation</p>
-                                <div class="d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary  mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
 
 @endsection

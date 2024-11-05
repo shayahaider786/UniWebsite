@@ -26,37 +26,35 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
+                                    <th>Image</th>
                                     <th>Name</th>
                                     <th>Description</th>
-                                    <th>Image</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @forelse ($administrations as $administration)
-                <tr>
-                    <td><img src="/images/{{ $administration->image }}" width="100px"></td>
-                    <td>{{ $administration->name }}</td>
-                    <td>{{ $administration->detail }}</td>
-                    <td>
-                        <form action="{{ route('administration.destroy', $administration->id) }}" method="POST">  
-                            <a class="btn btn-primary btn-sm" href="{{ route('administration.edit', $administration->id) }}"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
-                            
-                            @csrf
-                            @method('DELETE')
-                            
-                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-            @empty
-                <tr>
-                    <td colspan="5">There are no data.</td>
-                </tr>
-            @endforelse
-            </tbody>
-
-                    
+                                    <tr>
+                                        <td><img src="/images/{{ $administration->image }}" width="100px"></td>
+                                        <td>{{ $administration->name }}</td>
+                                        <td>{{ $administration->detail }}</td>
+                                        <td>
+                                            <form action="{{ route('administration.destroy', $administration->id) }}" method="POST">  
+                                                <a class="btn btn-primary btn-sm" href="{{ route('administration.edit', $administration->id) }}"><i class="fa-solid fa-pen-to-square"></i> Edit</a>
+                                                
+                                                @csrf
+                                                @method('DELETE')
+                                                
+                                                <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                @empty
+                                    <tr>
+                                        <td colspan="5">There are no data.</td>
+                                    </tr>
+                                @endforelse
+                            </tbody>
                         </table>
                     </div>
                 </div>
