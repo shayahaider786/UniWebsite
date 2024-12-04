@@ -16,7 +16,9 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
+        
     <!-- Custom styles for this template-->
     <link href="{{asset('backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
@@ -43,14 +45,44 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{route('admin.dashboard')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
             <li class="nav-item active">
+                <a class="nav-link" href="{{route('slider')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Slider</span></a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="{{route('administration')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
                     <span>Administration</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('matricAdmision')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Matric Admisions</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('interAdmision')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Intermediate Admisions</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('students')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Students</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('careers')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Careers</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('gallaries')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Gallary</span></a>
             </li>
 
             {{-- <!-- Divider -->
@@ -171,7 +203,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
                                 <img class="img-profile rounded-circle"
                                     src="/backend/img/undraw_profile.svg">
                             </a>
@@ -223,7 +255,14 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <a class="btn btn-primary" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                                  document.getElementById('logout-form').submit();">Logout</a>
+
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </div>
         </div>
@@ -246,6 +285,7 @@
     <script src="{{asset('backend/js/demo/chart-pie-demo.js')}}"></script>
     
     <script src="{{asset('backend/vendor/chart.js/Chart.min.js')}}"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>

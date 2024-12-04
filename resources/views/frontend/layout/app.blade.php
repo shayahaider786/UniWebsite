@@ -21,6 +21,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
+
     <!-- Libraries Stylesheet -->
     <link href="{{asset('frontend/lib/animate/animate.min.css')}}" rel="stylesheet">
     <link href="{{asset('frontend/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
@@ -30,6 +33,7 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('frontend/css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('frontend/css/mediaQuery.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -47,7 +51,7 @@
         <nav class="navbar navbar-expand-lg backgrounNav navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="{{route('index')}}" class="navbar-brand w-25">
                 {{-- <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kider</h1> --}}
-              <img src="/frontend/img/assets/logo3.png" alt="logo" class="p-2" width="30%">
+              <img src="/frontend/img/assets/logo3.png" alt="logo" class="p-2 logoImg">
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -70,17 +74,23 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admision</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">School Facilities</a>
-                            <a href="team.html" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action.html" class="dropdown-item">Become A Teachers</a>
-                            <a href="appointment.html" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="{{route('admisionPolicy')}}" class="dropdown-item">Admision Policy & Scholarships</a>
+                            <a href="{{route('classes')}}" class="dropdown-item">Classes</a>
+                            <a href="{{route('howToApply')}}" class="dropdown-item">How to Apply</a>
+                            <a href="{{route('systemExam')}}" class="dropdown-item">System Of Examination</a>
                         </div>
                     </div>
-                    <a href="classes.html" class="nav-item nav-link">Student</a>
-                    <a href="classes.html" class="nav-item nav-link">Fee</a>
-                    <a href="classes.html" class="nav-item nav-link">Career</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Student</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="{{route('studentStar')}}" class="dropdown-item">Shining Stars</a>
+                            <a href="{{route('studentTiming')}}" class="dropdown-item">Timings</a>
+                            {{-- <a href="{{route('systemExam')}}" class="dropdown-item">Notice Board</a> --}}
+                        </div>
+                    </div>
+                    <a href="{{route('feeStructure')}}" class="nav-item nav-link">Fee Structure</a>
+                    <a href="{{route('allGallary')}}" class="nav-item nav-link">Gallery</a>
+                    <a href="{{route('allCareer')}}" class="nav-item nav-link">Career</a>
                     <a href="contact.html" class="nav-item nav-link">Contact Us</a>
                 </div>
                 {{-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a> --}}
@@ -98,9 +108,9 @@
                 <div class="row g-5">
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Get In Touch</h3>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sharif Complex, Jati Umrah, <span class="ms-4">Lahore</span></p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>042 378 60308-10</p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>hr@sharif.edu.pk</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -184,6 +194,8 @@
     <script src="{{asset('frontend/lib/easing/easing.min.js')}}"></script>
     <script src="{{asset('frontend/lib/waypoints/waypoints.min.js')}}"></script>
     <script src="{{asset('frontend/lib/owlcarousel/owl.carousel.min.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
 
     <!-- Template Javascript -->
     <script src="{{asset('frontend/js/main.js')}}"></script>

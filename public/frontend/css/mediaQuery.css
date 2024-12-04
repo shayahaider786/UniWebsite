@@ -1,0 +1,19 @@
+@media screen and (max-width: 426px) {
+    .header-carousel .owl-carousel-item {
+        min-height: 250px;
+    }
+
+    .logoImg{
+        width: 80%;
+      }
+}
+
+@media screen and (max-width: 376px) {
+    .header-carousel .owl-carousel-item {
+        min-height: 200px;
+    }
+
+    /* .logoImg{
+        width: 80%;
+      } */
+}

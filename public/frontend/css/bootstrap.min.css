@@ -8239,6 +8239,9 @@ fieldset:disabled .btn {
     line-height: 2 !important
 }
 
+.text-justify {
+    text-align: justify;
+}
 .text-start {
     text-align: left !important
 }
