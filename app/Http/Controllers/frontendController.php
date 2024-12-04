@@ -5,6 +5,7 @@ use App\Models\Administration;
 use App\Models\Slider;
 use App\Models\Gallary;
 use App\Models\Student;
+use App\Models\Career;
 
 use Illuminate\Http\Request;
 
@@ -78,7 +79,17 @@ class FrontendController extends Controller
         return view('frontend.studentTiming');
     }
     public function allCareer(){
-        return view('frontend.career');
+        $careers = Career::all();
+        return view('frontend.career',compact('careers'));
     }
+    public function careerDetail($id)
+    {
+        // Fetch the career by its ID or fail gracefully if not found
+        $career = Career::where('id', $id)->firstOrFail();
+        
+        // Pass the data to the view
+        return view('frontend.careerDetail', compact('career'));
+    }
+    
 
 }

@@ -33,6 +33,7 @@ Route::get('/fee-structure', [FrontendController::class, 'feeStructure'])->name(
 Route::get('/shining-star', [FrontendController::class, 'studentStar'])->name('studentStar');
 Route::get('/student-timing', [FrontendController::class, 'studentTiming'])->name('studentTiming');
 Route::get('/career', [FrontendController::class, 'allCareer'])->name('allCareer');
+Route::get('/career/{id}', [FrontendController::class, 'careerDetail'])->name('careerDetail');
 
 
 Route::get('/montesari-to-matric-form', [AdmisionController::class, 'matriclationAdmision'])->name('matriclationAdmision');
