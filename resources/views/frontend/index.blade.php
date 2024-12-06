@@ -35,8 +35,8 @@
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">School Facilities</h1>
-                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
+                    <h1 class="mb-3">Facilities</h1>
+                    <p>Our facilities include modern amenities designed to support student growth and well-being. These include spacious classrooms, well-equipped libraries, a dedicated video room, and state-of-the-art sports infrastructure. All areas are maintained to ensure a conducive environment for learning and development.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -48,7 +48,7 @@
                             </div>
                             <div class="facility-text bg-primary">
                                 <h3 class="text-primary mb-3">School Bus</h3>
-                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                                <p class="mb-0">The school will provided transport facilities according to the specific routes.</p>
                             </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                             </div>
                             <div class="facility-text bg-success">
                                 <h3 class="text-success mb-3">Playground</h3>
-                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                                <p class="mb-0">SEC's sports societies actively foster young athletes and sportsmanship.</p>
                             </div>
                         </div>
                     </div>
@@ -69,12 +69,12 @@
                         <div class="facility-item">
                             <div class="facility-icon bg-warning">
                                 <span class="bg-warning"></span>
-                                <i class="fa fa-home fa-3x text-warning"></i>
+                                <i class="fa fa-book fa-3x text-warning"></i>
                                 <span class="bg-warning"></span>
                             </div>
                             <div class="facility-text bg-warning">
-                                <h3 class="text-warning mb-3">Healthy Canteen</h3>
-                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                                <h3 class="text-warning mb-3">Library</h3>
+                                <p class="mb-0">Timely updated, accessible books to foster student reading habits.</p>
                             </div>
                         </div>
                     </div>
@@ -86,8 +86,8 @@
                                 <span class="bg-info"></span>
                             </div>
                             <div class="facility-text bg-info">
-                                <h3 class="text-info mb-3">Positive Learning</h3>
-                                <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
+                                <h3 class="text-info mb-3">Language</h3>
+                                <p class="mb-0">APSAC has a video room for students to watch cartoons and animated movies. </p>
                             </div>
                         </div>
                     </div>
@@ -103,33 +103,24 @@
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
-                        <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
-                        <p class="mb-4">Stet no et lorem dolor et diam, amet duo ut dolore vero eos. No stet est diam rebum amet diam ipsum. Clita clita labore, dolor duo nonumy clita sit at, sed sit sanctus dolor eos, ipsum labore duo duo sit no sea diam. Et dolor et kasd ea. Eirmod diam at dolor est vero nonumy magna.</p>
+                        <p>Our initiatives focus on both educational excellence and fostering a rich cultural environment. We offer a variety of cultural activities, including performances, workshops, and events that celebrate creativity and diversity. </p>
+                        <p class="mb-4">These activities are designed to enrich the learning experience and help students develop well-rounded skills. Through these engagements, we aim to instill values of teamwork, discipline, and cultural appreciation.</p>
                         <div class="row g-4 align-items-center">
                             <div class="col-sm-6">
-                                <a class="btn btn-primary rounded-pill py-3 px-5" href="">Read More</a>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle flex-shrink-0" src="frontend/img/user.jpg" alt="" style="width: 45px; height: 45px;">
-                                    <div class="ms-3">
-                                        <h6 class="text-primary mb-1">Jhon Doe</h6>
-                                        <small>CEO & Founder</small>
-                                    </div>
-                                </div>
+                                <a class="btn btn-primary rounded-pill py-3 px-5" href="{{route('allGallary')}}">Read More</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
                         <div class="row">
                             <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="frontend/img/about-1.jpg" alt="">
+                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="frontend/img/assets/img4.png" alt="">
                             </div>
                             <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/about-2.jpg" alt="">
+                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/assets/img5.png" alt="">
                             </div>
                             <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/about-3.jpg" alt="">
+                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/assets/img6.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -420,7 +411,7 @@
 
 
         <!-- Appointment Start -->
-        <div class="container-xxl py-5">
+        {{-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="bg-light rounded">
                     <div class="row g-0">
@@ -474,7 +465,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Appointment End -->
 
 
@@ -536,7 +527,7 @@
 
 
         <!-- Testimonial Start -->
-        <div class="container-xxl py-5">
+        {{-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Our Clients Say!</h1>
@@ -578,6 +569,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Testimonial End -->
 @endsection
