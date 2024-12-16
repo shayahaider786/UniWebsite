@@ -34,6 +34,8 @@ Route::get('/shining-star', [FrontendController::class, 'studentStar'])->name('s
 Route::get('/student-timing', [FrontendController::class, 'studentTiming'])->name('studentTiming');
 Route::get('/career', [FrontendController::class, 'allCareer'])->name('allCareer');
 Route::get('/career/{id}', [FrontendController::class, 'careerDetail'])->name('careerDetail');
+Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
+Route::post('/contact/store', [FrontendController::class, 'contactForm'])->name('contactForm');
 
 
 Route::get('/montesari-to-matric-form', [AdmisionController::class, 'matriclationAdmision'])->name('matriclationAdmision');
@@ -63,10 +65,12 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/dashboard', [BackendController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/administration', [BackendController::class, 'administration'])->name('administration');
     Route::get('/admin/matric-data', [BackendController::class, 'matricAdmision'])->name('matricAdmision');
+    Route::delete('/admin/matric-data/delete-all', [BackendController::class, 'matricDeleteAll'])->name('matricDeleteAll');
     Route::get('/admin/matric-data/export', [BackendController::class, 'matricAdmisionExport'])->name('matricAdmisionExport');
     Route::get('/admin/matric-data-show/{id}', [BackendController::class, 'matricDataShow'])->name('matricDataShow');
     
     Route::get('/admin/inter-data', [BackendController::class, 'interAdmision'])->name('interAdmision');
+    Route::delete('/admin/inter-data/delete-all', [BackendController::class, 'interDeleteAll'])->name('interDeleteAll');
     Route::get('/admin/inter-data/export', [BackendController::class, 'interAdmisionExport'])->name('interAdmisionExport');
     Route::get('/admin/inter-data-show/{id}', [BackendController::class, 'interDataShow'])->name('interDataShow');
     Route::get('/admin/slider', [BackendController::class, 'slider'])->name('slider');
@@ -79,5 +83,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/gallary', [BackendController::class, 'gallaries'])->name('gallaries');
     Route::post('/admin/gallery/post', [BackendController::class, 'gallaryStore'])->name('gallaryStore');
     Route::delete('/admin/gallery/delete/{id}', [BackendController::class, 'gallaryDestroy'])->name('gallaryDestroy');
+    Route::get('/admin/contact-us', [BackendController::class, 'allContactData'])->name('allContactData');
+    Route::delete('/admin/contact/{id}', [BackendController::class, 'contactDestroy'])->name('contactDestroy');
 
 });

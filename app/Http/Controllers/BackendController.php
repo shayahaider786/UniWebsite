@@ -8,6 +8,7 @@ use App\Models\InterStudent;
 use App\Models\Student;
 use App\Models\Career;
 use App\Models\Gallary;
+use App\Models\Contact;
 use Illuminate\Support\Facades\Storage; // Add this at the top of the controller
 
 use Illuminate\Support\Facades\Response;
@@ -35,6 +36,12 @@ class BackendController extends Controller
         return view('backend.matricData', compact('matricDatas'));
 
     }
+    public function matricDeleteAll()
+    {
+        MatricStudent::truncate(); // Deletes all records from the table
+        return redirect()->route('matricAdmision')->with('success', 'All matric data deleted successfully.');
+    }
+
     public function matricAdmisionExport(){
         $fileName = 'matric_admissions.csv';
         $matricDatas = MatricStudent::all();
@@ -85,6 +92,11 @@ class BackendController extends Controller
         $interDatas = InterStudent::paginate(10); // Adjust the number as needed
         return view('backend.interData', compact('interDatas'));
 
+    }
+    public function interDeleteAll()
+    {
+        InterStudent::truncate(); // Deletes all records from the table
+        return redirect()->route('interAdmision')->with('success', 'All intern data deleted successfully.');
     }
     public function interAdmisionExport(){
         $fileName = 'inter_admissions.csv';
@@ -179,5 +191,17 @@ class BackendController extends Controller
         $gallaries->delete();
     
         return redirect()->route('gallaries')->with('success', 'Gallary item deleted successfully.');
+    }
+
+    public function allContactData(){
+        $contacts = Contact::all();
+        return view('backend.contact', compact('contacts'));
+    }
+    public function contactDestroy($id)
+    {
+        $contact = Contact::findOrFail($id); // Find the contact by ID or return a 404 error
+        $contact->delete(); // Delete the contact
+
+        return back()->with('success', 'Message deleted successfully!');
     }
 }

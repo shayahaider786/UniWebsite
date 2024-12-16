@@ -6,6 +6,7 @@ use App\Models\Slider;
 use App\Models\Gallary;
 use App\Models\Student;
 use App\Models\Career;
+use App\Models\Contact;
 
 use Illuminate\Http\Request;
 
@@ -91,5 +92,19 @@ class FrontendController extends Controller
         return view('frontend.careerDetail', compact('career'));
     }
     
+    public function contact(){
+        return view('frontend.contact');
+    }
+    public function contactForm(Request $request){
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'subject' => 'required|string|max:255',
+            'message' => 'required|string',
+        ]);
 
+        Contact::create($validated);
+
+        return back()->with('success', 'Message sent successfully!');
+    }
 }

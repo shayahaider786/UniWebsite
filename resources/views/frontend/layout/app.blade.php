@@ -58,40 +58,40 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="{{route('index')}}" class="nav-item nav-link active">Home</a>
+                    <a href="{{ route('index') }}" class="nav-item nav-link {{ Request::routeIs('index') ? 'active' : '' }}">Home</a>
                     <div class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="{{ route('about') }}" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {{ Request::routeIs('about', 'principalMessage', 'missionVission', 'allAdministration', 'facilities', 'trustees') ? 'active' : '' }}" href="{{ route('about') }}">
                             About
-                          </a>   
+                        </a>   
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="{{ route('principalMessage') }}" class="dropdown-item">Principal Message</a>
-                            <a href="{{route('missionVission')}}" class="dropdown-item">Vision & Mission</a>
-                            <a href="{{route('allAdministration')}}" class="dropdown-item">Administration</a>
-                            <a href="{{route('facilities')}}" class="dropdown-item">Facilities</a>
-                            <a href="{{route('trustees')}}" class="dropdown-item">Trustees</a>
+                            <a href="{{ route('principalMessage') }}" class="dropdown-item {{ Request::routeIs('principalMessage') ? 'active' : '' }}">Principal Message</a>
+                            <a href="{{ route('missionVission') }}" class="dropdown-item {{ Request::routeIs('missionVission') ? 'active' : '' }}">Vision & Mission</a>
+                            <a href="{{ route('allAdministration') }}" class="dropdown-item {{ Request::routeIs('allAdministration') ? 'active' : '' }}">Administration</a>
+                            <a href="{{ route('facilities') }}" class="dropdown-item {{ Request::routeIs('facilities') ? 'active' : '' }}">Facilities</a>
+                            <a href="{{ route('trustees') }}" class="dropdown-item {{ Request::routeIs('trustees') ? 'active' : '' }}">Trustees</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Admision</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs('admisionPolicy', 'classes', 'howToApply', 'systemExam') ? 'active' : '' }}" data-bs-toggle="dropdown">Admission</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="{{route('admisionPolicy')}}" class="dropdown-item">Admision Policy & Scholarships</a>
-                            <a href="{{route('classes')}}" class="dropdown-item">Classes</a>
-                            <a href="{{route('howToApply')}}" class="dropdown-item">How to Apply</a>
-                            <a href="{{route('systemExam')}}" class="dropdown-item">System Of Examination</a>
+                            <a href="{{ route('admisionPolicy') }}" class="dropdown-item {{ Request::routeIs('admisionPolicy') ? 'active' : '' }}">Admission Policy & Scholarships</a>
+                            <a href="{{ route('classes') }}" class="dropdown-item {{ Request::routeIs('classes') ? 'active' : '' }}">Classes</a>
+                            <a href="{{ route('howToApply') }}" class="dropdown-item {{ Request::routeIs('howToApply') ? 'active' : '' }}">How to Apply</a>
+                            <a href="{{ route('systemExam') }}" class="dropdown-item {{ Request::routeIs('systemExam') ? 'active' : '' }}">System Of Examination</a>
                         </div>
                     </div>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Student</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs('studentStar', 'studentTiming') ? 'active' : '' }}" data-bs-toggle="dropdown">Student</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="{{route('studentStar')}}" class="dropdown-item">Shining Stars</a>
-                            <a href="{{route('studentTiming')}}" class="dropdown-item">Timings</a>
-                            {{-- <a href="{{route('systemExam')}}" class="dropdown-item">Notice Board</a> --}}
+                            <a href="{{ route('studentStar') }}" class="dropdown-item {{ Request::routeIs('studentStar') ? 'active' : '' }}">Shining Stars</a>
+                            <a href="{{ route('studentTiming') }}" class="dropdown-item {{ Request::routeIs('studentTiming') ? 'active' : '' }}">Timings</a>
                         </div>
                     </div>
-                    <a href="{{route('feeStructure')}}" class="nav-item nav-link">Fee Structure</a>
-                    <a href="{{route('allGallary')}}" class="nav-item nav-link">Gallery</a>
-                    <a href="{{route('allCareer')}}" class="nav-item nav-link">Career</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    <a href="{{ route('feeStructure') }}" class="nav-item nav-link {{ Request::routeIs('feeStructure') ? 'active' : '' }}">Fee Structure</a>
+                    <a href="{{ route('allGallary') }}" class="nav-item nav-link {{ Request::routeIs('allGallary') ? 'active' : '' }}">Gallery</a>
+                    <a href="{{ route('allCareer') }}" class="nav-item nav-link {{ Request::routeIs('allCareer') ? 'active' : '' }}">Career</a>
+                    <a href="{{ route('contact') }}" class="nav-item nav-link {{ Request::routeIs('contact') ? 'active' : '' }}">Contact Us</a>
+                    
                 </div>
                 {{-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a> --}}
             </div>

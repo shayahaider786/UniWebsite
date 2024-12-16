@@ -84,6 +84,11 @@
                     {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
                     <span>Gallary</span></a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{{route('allContactData')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Contact Us</span></a>
+            </li>
 
             {{-- <!-- Divider -->
             <hr class="sidebar-divider">

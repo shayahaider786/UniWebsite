@@ -8,6 +8,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">Matric Data</h1>
         <a href="{{route('matricAdmisionExport')}}" class="d-none d-sm-inline-block btn btn-sm btn-success shadow-sm">Export to CSV</a>
+        
     </div>
 
     <!-- Content Row -->
@@ -18,9 +19,22 @@
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Matric Table</h6>
                 </div>
+              
                 @session('success')
                     <div class="alert alert-success" role="alert"> {{ $value }} </div>
                 @endsession
+                <div class="mt-3 me-4">
+                    @if($matricDatas->isEmpty())
+                        {{-- <p class="text-danger float-end">No data to delete</p> --}}
+                        <button type="button" class="btn btn-danger float-end" disabled>Delete All Data</button>
+                    @else
+                        <form action="{{ route('matricDeleteAll') }}" method="POST" onsubmit="return confirm('Are you sure you want to delete all matric data?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger float-end">Delete All Data</button>
+                        </form>
+                    @endif
+                </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

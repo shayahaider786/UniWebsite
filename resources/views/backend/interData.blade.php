@@ -21,6 +21,18 @@
                 @session('success')
                     <div class="alert alert-success" role="alert"> {{ $value }} </div>
                 @endsession
+                <div class="mt-3 me-4">
+                    @if($interDatas->isEmpty())
+                        {{-- <p class="text-danger float-end">No data to delete</p> --}}
+                        <button type="button" class="btn btn-danger float-end" disabled>Delete All Data</button>
+                    @else
+                        <form action="{{ route('interDeleteAll') }}" method="POST" onsubmit="return confirm('Are you sure you want to delete all inter data?');">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger float-end">Delete All Data</button>
+                        </form>
+                    @endif
+                </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
