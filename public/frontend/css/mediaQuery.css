@@ -1,3 +1,8 @@
+@media screen and (max-width: 1024px) {
+    .navbar .navbar-nav .nav-link {
+        font-size: 13px;
+    }
+}
 @media screen and (max-width: 426px) {
     .header-carousel .owl-carousel-item {
         min-height: 250px;

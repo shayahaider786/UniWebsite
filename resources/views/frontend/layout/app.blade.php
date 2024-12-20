@@ -48,7 +48,7 @@
 
 
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg backgrounNav navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+        <nav class="navbar navbar-expand-lg backgrounNav navbar-dark sticky-top px-4 px-lg-5 py-lg-0">
             <a href="{{route('index')}}" class="navbar-brand w-25">
                 {{-- <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kider</h1> --}}
               <img src="/frontend/img/assets/logo3.png" alt="logo" class="p-2 logoImg">
