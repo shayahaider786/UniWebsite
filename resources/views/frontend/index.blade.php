@@ -30,6 +30,104 @@
         </div>
         <!-- Carousel End -->
 
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-12 wow  fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-4">Welcome to the start of your journey</h1>
+                        <div class="row mt-4">
+                            <div class="col-md-7 mt-2">
+                                <img src="frontend/img/assets/img5.png" class="img-fluid rounded" width="100%" alt="">
+                            </div>
+                            <div class="col-md-5 mt-2">
+                                <p class="mb-3 alignPara fs-5 px-3">
+                                    Since 1998, SEC has been committed to academic excellence and holistic development, fostering an environment where every student’s unique potential is recognized and nurtured. As the principal, I am honored to lead a school that goes beyond academics to inspire creativity, resilience, and a lifelong passion for learning.
+
+                                    At SEC, we believe education is not just about achieving academic success but also about building character and a strong sense of purpose. Our goal is to help students embrace challenges, grow with confidence, and emerge as compassionate, well-rounded individuals ready to make a positive impact in the world.
+
+                                    As you begin this journey with us, know that SEC is more than just a school—it’s a community dedicated to your growth and success. Together, we will create a future filled with opportunities and achievements. Welcome to SEC, where your journey of transformation begins!                               
+                                </p>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+        <!-- pricipal message  Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-12 wow  fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-4">Message by Principal</h1>
+                        <div class="row mt-4">
+                            <div class="col-md-8 mt-2">
+                                <p class="mb-3 alignPara">
+                                    Welcome to SEC, where we have been committed to academic excellence and holistic development since 1998. As principal, I am honored to lead a school that values each student's unique potential and strives to provide a nurturing environment where they can flourish both academically and personally. At SEC, we believe that education is not just about academic success but also about building character, resilience, and a strong sense of purpose.
+                                </p>
+                                <p class="mb-3 alignPara">
+                                    Sharif Education complex is a unique educational project in providing extraordinary care and education with a sense of ownership to the students. It has completed its 26 academic years obtaining very good results and achieving its mission. The mission of the school is to educate and train the generation making them right spirited Muslims and Pakistani citizens. During the education, necessary emphasis is laid on the character building and personality development of the students. The curriculum, thus, includes a broad and well-planned program for academic, mental and physical training of the students which will enable them to adopt any profession in life.
+                                </p>
+                                <p class="mb-3 alignPara">
+                                    Thank you for entrusting us with your child’s education. Together, as a community of students, parents, and teachers, we aim to make their educational journey enriching and impactful. We look forward to a bright future with you as part of the SEC family.
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="d-flex align-items-center">
+                                            <div class="">
+                                                <h6 class="text-primary mb-1">Warm regards,</h6>
+                                                <small>Muhammad Ashfaq</small><br>
+                                                <small>Principal, SEC</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 mt-2">
+                                <img src="frontend/img/assets/pricipleImg.png" class="img-fluid rounded" width="100%" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- pricipal message  end -->
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
+                        <p>Our initiatives focus on both educational excellence and fostering a rich cultural environment. We offer a variety of cultural activities, including performances, workshops, and events that celebrate creativity and diversity. </p>
+                        <p class="mb-4">These activities are designed to enrich the learning experience and help students develop well-rounded skills. Through these engagements, we aim to instill values of teamwork, discipline, and cultural appreciation.</p>
+                        <div class="row g-4 align-items-center">
+                            <div class="col-sm-6">
+                                <a class="btn btn-primary rounded-pill py-3 px-5" href="{{route('allGallary')}}">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="frontend/img/assets/img4.png" alt="">
+                            </div>
+                            <div class="col-6 text-start" style="margin-top: -150px;">
+                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/assets/img5.png" alt="">
+                            </div>
+                            <div class="col-6 text-end" style="margin-top: -150px;">
+                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/assets/img6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
 
         <!-- Facilities Start -->
         <div class="container-xxl py-5">
@@ -92,46 +190,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="row g-4 mt-4 align-items-center wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="text-center">
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="{{route('facilities')}}">Read More</a>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Facilities End -->
 
 
-        <!-- About Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Learn More About Our Work And Our Cultural Activities</h1>
-                        <p>Our initiatives focus on both educational excellence and fostering a rich cultural environment. We offer a variety of cultural activities, including performances, workshops, and events that celebrate creativity and diversity. </p>
-                        <p class="mb-4">These activities are designed to enrich the learning experience and help students develop well-rounded skills. Through these engagements, we aim to instill values of teamwork, discipline, and cultural appreciation.</p>
-                        <div class="row g-4 align-items-center">
-                            <div class="col-sm-6">
-                                <a class="btn btn-primary rounded-pill py-3 px-5" href="{{route('allGallary')}}">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="row">
-                            <div class="col-12 text-center">
-                                <img class="img-fluid w-75 rounded-circle bg-light p-3" src="frontend/img/assets/img4.png" alt="">
-                            </div>
-                            <div class="col-6 text-start" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/assets/img5.png" alt="">
-                            </div>
-                            <div class="col-6 text-end" style="margin-top: -150px;">
-                                <img class="img-fluid w-100 rounded-circle bg-light p-3" src="frontend/img/assets/img6.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- About End -->
-
-
         <!-- Call To Action Start -->
-        <div class="container-xxl py-5">
+        {{-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="bg-light rounded">
                     <div class="row g-0">
@@ -152,12 +222,12 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Call To Action End -->
 
 
         <!-- Classes Start -->
-        <div class="container-xxl py-5">
+        {{-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">School Classes</h1>
@@ -406,7 +476,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Classes End -->
 
 
@@ -470,7 +540,7 @@
 
 
         <!-- Team Start -->
-        <div class="container-xxl py-5">
+        {{-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">Popular Teachers</h1>
@@ -522,7 +592,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Team End -->
 
 

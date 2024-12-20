@@ -10,11 +10,25 @@ use App\Http\Controllers\AdmisionController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CareerController;
 
+
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+// Route::get('/', function () {
+    //     return view('welcome');
+    // });
+    
+
+    // Define only login, logout, and password reset routes
+// Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::get('/sec/auth', [BackendController::class, 'login'])->name('login'); 
+Route::post('login/form', [LoginController::class, 'login'])->name('login');
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
 
-Auth::routes();
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
 Route::get('/about', [FrontendController::class, 'about'])->name('about');
@@ -58,9 +72,12 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 All Admin Routes List
 --------------------------------------------
 --------------------------------------------*/
+// Auth::routes();
+
+
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
   
-    Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+    // Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
     // Route::get('/admin/dashboard', [HomeController::class, 'dashboard'])->name('dashoard');
     Route::get('/admin/dashboard', [BackendController::class, 'dashboard'])->name('admin.dashboard');
     Route::get('/admin/administration', [BackendController::class, 'administration'])->name('administration');

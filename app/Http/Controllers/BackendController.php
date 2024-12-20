@@ -19,7 +19,11 @@ class BackendController extends Controller
 {
     public function dashboard()
     {
-        return view('backend.index');
+        $matricStudents = MatricStudent::count();
+        $interStudents = InterStudent::count();
+        $allContacts = Contact::count();
+        $allgallaries = Gallary::count();
+        return view('backend.index',compact('matricStudents', 'interStudents','allContacts','allgallaries'));
     }
     public function administration()
     {
@@ -203,5 +207,9 @@ class BackendController extends Controller
         $contact->delete(); // Delete the contact
 
         return back()->with('success', 'Message deleted successfully!');
+    }
+
+    public function login(){
+        return view('backend.login');
     }
 }

@@ -46,7 +46,7 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('admin.dashboard')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
                     <span>Dashboard</span></a>
             </li>
             <li class="nav-item active">
@@ -72,7 +72,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('students')}}">
                     {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
-                    <span>Students</span></a>
+                    <span>Position Holders</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('careers')}}">

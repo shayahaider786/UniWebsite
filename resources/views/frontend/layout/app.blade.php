@@ -112,17 +112,18 @@
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>042 378 60308-10</p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>hr@sharif.edu.pk</p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            {{-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> --}}
+                            <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/SharifEducationComplex" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            {{-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a> --}}
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Quick Links</h3>
-                        <a class="btn btn-link text-white-50" href="">About Us</a>
-                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="">Our Services</a>
+                        <a class="btn btn-link text-white-50" href="{{route('about')}}">About Us</a>
+                        <a class="btn btn-link text-white-50" href="{{route('contact')}}">Contact Us</a>
+                        <a class="btn btn-link text-white-50" href="{{route('admisionPolicy')}}">Admission</a>
                         <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
                         <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
                     </div>
@@ -130,28 +131,28 @@
                         <h3 class="text-white mb-4">Photo Gallery</h3>
                         <div class="row g-2 pt-2">
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/classes-1.jpg" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img4.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/classes-2.jpg" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img5.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/classes-3.jpg" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img6.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/classes-4.jpg" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img9.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/classes-5.jpg" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img10.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/classes-6.jpg" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img12.png" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                        {{-- <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p> --}}
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>

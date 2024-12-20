@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">Students</h1>
+        <h1 class="h3 mb-0 text-gray-800">Position Holders</h1>
         <a href="{{ route('students.create') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
             <i class="fas fa-plus-circle"></i> Add Student
         </a>
@@ -15,7 +15,7 @@
         <div class="col-md-12">
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Student Table</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Position Holders Table</h6>
                 </div>
                 
                 <!-- Success Message -->
