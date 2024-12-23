@@ -60,7 +60,8 @@
                         type="file" 
                         name="image" 
                         class="form-control @error('image') is-invalid @enderror" 
-                        id="inputImage">
+                        id="inputImage"
+                        required>
                     @error('image')
                         <div class="form-text text-danger">{{ $message }}</div>
                     @enderror

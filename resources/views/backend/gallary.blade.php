@@ -27,7 +27,7 @@
                         <div class="row">
                             <div class="col-md-6 form-group">
                                 <label for="images">Select Images:</label>
-                                <input type="file" name="images[]" id="images" multiple class="form-control">
+                                <input type="file" name="images[]" id="images" multiple class="form-control" required>
                                 @error('images.*')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
