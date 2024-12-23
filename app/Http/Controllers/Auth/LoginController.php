@@ -66,4 +66,12 @@ class LoginController extends Controller
         }
           
     }
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        return redirect()->back()
+            ->withInput($request->only('email'))
+            ->withErrors([
+                'email' => 'The credentials you provided are invalid.',
+            ]);
+    }
 }

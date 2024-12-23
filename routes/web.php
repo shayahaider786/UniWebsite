@@ -14,20 +14,17 @@ use App\Http\Controllers\CareerController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+
 // Route::get('/', function () {
     //     return view('welcome');
     // });
     
-
+// Auth::routes();
     // Define only login, logout, and password reset routes
 // Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::get('/sec/auth', [BackendController::class, 'login'])->name('login'); 
 Route::post('login/form', [LoginController::class, 'login'])->name('login');
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
 
 Route::get('/', [FrontendController::class, 'index'])->name('index');
@@ -72,7 +69,7 @@ Route::middleware(['auth', 'user-access:user'])->group(function () {
 All Admin Routes List
 --------------------------------------------
 --------------------------------------------*/
-// Auth::routes();
+
 
 
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
@@ -103,4 +100,10 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/contact-us', [BackendController::class, 'allContactData'])->name('allContactData');
     Route::delete('/admin/contact/{id}', [BackendController::class, 'contactDestroy'])->name('contactDestroy');
 
+});
+
+
+
+Route::fallback(function () {
+    return redirect('/');
 });
