@@ -46,97 +46,59 @@
         </div>
         <!-- Spinner End -->
 
-        <div class="container-fluid position-relative p-0">
-            <!-- Navbar Start -->
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-lg-0 position-absolute w-100" style="z-index: 10; background-color: rgba(0, 0, 0, 0.5);">
-                <a href="{{route('index')}}" class="navbar-brand w-25">
-                    <img src="/frontend/img/assets/logo3.png" alt="logo" class="logoImg">
-                </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav mx-auto">
-                        <a href="{{ route('index') }}" class="nav-item nav-link {{ Request::routeIs('index') ? 'active' : '' }}">Home</a>
-                        <div class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle {{ Request::routeIs('about', 'principalMessage', 'missionVission', 'allAdministration', 'facilities', 'trustees') ? 'active' : '' }}" href="{{ route('about') }}">
-                                About
-                            </a>   
-                            <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                                <a href="{{ route('principalMessage') }}" class="dropdown-item {{ Request::routeIs('principalMessage') ? 'active' : '' }}">Principal Message</a>
-                                <a href="{{ route('missionVission') }}" class="dropdown-item {{ Request::routeIs('missionVission') ? 'active' : '' }}">Vision & Mission</a>
-                                <a href="{{ route('allAdministration') }}" class="dropdown-item {{ Request::routeIs('allAdministration') ? 'active' : '' }}">Administration</a>
-                                <a href="{{ route('facilities') }}" class="dropdown-item {{ Request::routeIs('facilities') ? 'active' : '' }}">Facilities</a>
-                                <a href="{{ route('trustees') }}" class="dropdown-item {{ Request::routeIs('trustees') ? 'active' : '' }}">Trustees</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs('admisionPolicy', 'classes', 'howToApply', 'systemExam') ? 'active' : '' }}" data-bs-toggle="dropdown">Admission</a>
-                            <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                                <a href="{{ route('admisionPolicy') }}" class="dropdown-item {{ Request::routeIs('admisionPolicy') ? 'active' : '' }}">Admission Policy</a>
-                                <a href="{{ route('scholarship') }}" class="dropdown-item {{ Request::routeIs('scholarship') ? 'active' : '' }}">Scholarships</a>
-                                <a href="{{ route('classes') }}" class="dropdown-item {{ Request::routeIs('classes') ? 'active' : '' }}">Classes</a>
-                                <a href="{{ route('howToApply') }}" class="dropdown-item {{ Request::routeIs('howToApply') ? 'active' : '' }}">How to Apply</a>
-                                <a href="{{ route('systemExam') }}" class="dropdown-item {{ Request::routeIs('systemExam') ? 'active' : '' }}">Examination System</a>
-                            </div>
-                        </div>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs('studentStar', 'studentTiming') ? 'active' : '' }}" data-bs-toggle="dropdown">Student</a>
-                            <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                                <a href="{{ route('studentStar') }}" class="dropdown-item {{ Request::routeIs('studentStar') ? 'active' : '' }}">Shining Stars</a>
-                                <a href="{{ route('studentTiming') }}" class="dropdown-item {{ Request::routeIs('studentTiming') ? 'active' : '' }}">Timings</a>
-                            </div>
-                        </div>
-                        <a href="{{ route('feeStructure') }}" class="nav-item nav-link {{ Request::routeIs('feeStructure') ? 'active' : '' }}">Fee Structure</a>
-                        <a href="{{ route('allGallary') }}" class="nav-item nav-link {{ Request::routeIs('allGallary') ? 'active' : '' }}">Gallery</a>
-                        <a href="{{ route('allCareer') }}" class="nav-item nav-link {{ Request::routeIs('allCareer') ? 'active' : '' }}">Career</a>
-                        <a href="{{ route('contact') }}" class="nav-item nav-link {{ Request::routeIs('contact') ? 'active' : '' }}">Contact Us</a>
 
-
-                        @guest
-                        @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link d-none" href="{{ route('login') }}">login</a>
-                            </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a  class="nav-link" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-gauge"></i></a>
-                        </li>
-                    @endguest
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg backgrounNav navbar-dark px-4 px-lg-5 py-lg-0">
+            <a href="{{route('index')}}" class="navbar-brand w-25">
+                {{-- <h1 class="m-0 text-primary"><i class="fa fa-book-reader me-3"></i>Kider</h1> --}}
+              <img src="/frontend/img/assets/logo3.png" alt="logo" class="logoImg">
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto">
+                    <a href="{{ route('index') }}" class="nav-item nav-link {{ Request::routeIs('index') ? 'active' : '' }}">Home</a>
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle {{ Request::routeIs('about', 'principalMessage', 'missionVission', 'allAdministration', 'facilities', 'trustees') ? 'active' : '' }}" href="{{ route('about') }}">
+                            About
+                        </a>   
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="{{ route('principalMessage') }}" class="dropdown-item {{ Request::routeIs('principalMessage') ? 'active' : '' }}">Principal Message</a>
+                            <a href="{{ route('missionVission') }}" class="dropdown-item {{ Request::routeIs('missionVission') ? 'active' : '' }}">Vision & Mission</a>
+                            <a href="{{ route('allAdministration') }}" class="dropdown-item {{ Request::routeIs('allAdministration') ? 'active' : '' }}">Administration</a>
+                            <a href="{{ route('facilities') }}" class="dropdown-item {{ Request::routeIs('facilities') ? 'active' : '' }}">Facilities</a>
+                            <a href="{{ route('trustees') }}" class="dropdown-item {{ Request::routeIs('trustees') ? 'active' : '' }}">Trustees</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
-            <!-- Navbar End -->
-        
-            <!-- Slider Start -->
-            <div class="container-fluid p-0 mb-5">
-                <div class="owl-carousel header-carousel position-relative">
-                    @foreach($sliders as $slider)
-                        <div class="owl-carousel-item position-relative">
-                            <img class="img-fluid" src="{{ asset('storage/' . $slider->image) }}" alt="{{ $slider->title }}">
-                            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                                <div class="container">
-                                    <div class="row justify-content-start">
-                                        <div class="col-10 col-lg-8">
-                                            <h1 class="display-2 text-white animated slideInDown mb-4">{{ $slider->title }}</h1>
-                                            <p class="fs-5 fw-medium text-white mb-4 pb-2">{{ $slider->paragraph }}</p>
-                                            @if($slider->link)
-                                                <a href="{{ $slider->link }}" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">
-                                                    {{ $slider->button_name ?? 'Learn More' }}
-                                                </a>
-                                            @endif
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs('admisionPolicy', 'classes', 'howToApply', 'systemExam') ? 'active' : '' }}" data-bs-toggle="dropdown">Admission</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="{{ route('admisionPolicy') }}" class="dropdown-item {{ Request::routeIs('admisionPolicy') ? 'active' : '' }}">Admission Policy</a>
+                            <a href="{{ route('scholarship') }}" class="dropdown-item {{ Request::routeIs('scholarship') ? 'active' : '' }}">Scholarships</a>
+                            <a href="{{ route('classes') }}" class="dropdown-item {{ Request::routeIs('classes') ? 'active' : '' }}">Classes</a>
+                            <a href="{{ route('howToApply') }}" class="dropdown-item {{ Request::routeIs('howToApply') ? 'active' : '' }}">How to Apply</a>
+                            <a href="{{ route('systemExam') }}" class="dropdown-item {{ Request::routeIs('systemExam') ? 'active' : '' }}">System Of Examination</a>
                         </div>
-                    @endforeach
-                </div>            
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::routeIs('studentStar', 'studentTiming') ? 'active' : '' }}" data-bs-toggle="dropdown">Student</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                            <a href="{{ route('studentStar') }}" class="dropdown-item {{ Request::routeIs('studentStar') ? 'active' : '' }}">Shining Stars</a>
+                            <a href="{{ route('studentTiming') }}" class="dropdown-item {{ Request::routeIs('studentTiming') ? 'active' : '' }}">Timings</a>
+                        </div>
+                    </div>
+                    <a href="{{ route('feeStructure') }}" class="nav-item nav-link {{ Request::routeIs('feeStructure') ? 'active' : '' }}">Fee Structure</a>
+                    <a href="{{ route('allGallary') }}" class="nav-item nav-link {{ Request::routeIs('allGallary') ? 'active' : '' }}">Gallery</a>
+                    <a href="{{ route('allCareer') }}" class="nav-item nav-link {{ Request::routeIs('allCareer') ? 'active' : '' }}">Career</a>
+                    <a href="{{ route('contact') }}" class="nav-item nav-link {{ Request::routeIs('contact') ? 'active' : '' }}">Contact Us</a>
+                    
+                </div>
+                {{-- <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a> --}}
             </div>
-            <!-- Slider End -->
-        </div>
-        
+        </nav>
+        <!-- Navbar End -->
+
 
         @yield('content')
 
@@ -149,9 +111,7 @@
                         <h3 class="text-white mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sharif Complex, Jati Umrah, <span class="ms-4">Lahore</span></p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>042 378 60308-10</p>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@sharif.edu.pk" target="_blank" style="text-decoration: none; color: inherit;">
-                            <p class="mb-2"><i class="fa fa-envelope me-3"></i>hr@sharif.edu.pk</p>
-                        </a>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>hr@sharif.edu.pk</p>
                         <div class="d-flex pt-2">
                             {{-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> --}}
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/SharifEducationComplex" target="_blank"><i class="fab fa-facebook-f"></i></a>

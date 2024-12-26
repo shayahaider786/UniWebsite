@@ -36,6 +36,7 @@ Route::get('/administrations/{slug}', [FrontendController::class, 'administratio
 Route::get('/facilities', [FrontendController::class, 'facilities'])->name('facilities');
 Route::get('/trustees', [FrontendController::class, 'trustees'])->name('trustees');
 Route::get('/admision-policy', [FrontendController::class, 'admisionPolicy'])->name('admisionPolicy');
+Route::get('/scholarships', [FrontendController::class, 'scholarship'])->name('scholarship');
 Route::get('/classes', [FrontendController::class, 'classes'])->name('classes');
 Route::get('/how-to-apply', [FrontendController::class, 'howToApply'])->name('howToApply');
 Route::get('/system-examintion', [FrontendController::class, 'systemExam'])->name('systemExam');

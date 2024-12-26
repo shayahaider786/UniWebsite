@@ -5,11 +5,11 @@
         <!-- Page Header End -->
         <div class="container-xxl py-5 page-header position-relative mb-5">
             <div class="container py-5">
-                <h1 class="display-2 text-white animated slideInDown mb-4">Admision Policy</h1>
+                <h1 class="display-2 text-white animated slideInDown mb-4">Scholarships</h1>
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{route('index')}}">Home</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">Admision Policy</li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Scholarships</li>
                     </ol>
                 </nav>
             </div>
@@ -18,7 +18,7 @@
 
 
          <!--school Adminsin  Start -->
-         <div class="container-xxl py-5">
+         {{-- <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-12 wow  fadeInUp" data-wow-delay="0.1s">
@@ -58,11 +58,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- school Adminsin End -->
 
          <!--school Adminsin  Start -->
-         {{-- <div class="container-xxl py-5">
+         <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-12 wow  fadeInUp" data-wow-delay="0.1s">
@@ -113,7 +113,7 @@
                     </div>
                 </div>
             </div>
-         </div> --}}
+        </div>
         <!-- school Adminsin End -->
 
 

@@ -1,4 +1,4 @@
-@extends('frontend.layout.app')
+@extends('frontend.layout.appTwo')
 
 @section('content')
 
@@ -37,16 +37,25 @@
                         <h6>Sharif Complex, Jati Umrah, Lahore</h6>
                     </div>
                     <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
-                            <i class="fa fa-envelope-open fa-2x text-primary"></i>
-                        </div>
-                        <h6>hr@sharif.edu.pk</h6>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@sharif.edu.pk" target="_blank" >
+                            <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
+                                <i class="fa fa-envelope-open fa-2x text-primary"></i>
+                            </div>
+                            <h6> 
+                                hr@sharif.edu.pk
+                            </h6>
+                        </a>
                     </div>
                     <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="https://wa.me/923008521730" target="_blank" style="text-decoration: none; color: inherit;">
                         <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
-                            <i class="fa fa-phone-alt fa-2x text-primary"></i>
+                            {{-- <i class="fa fa-phone-alt fa-2x text-primary"></i> --}}
+                            <i class="fa-brands fa-whatsapp fa-2x text-primary"></i>
                         </div>
-                        <h6>042 378 60308-10</h6>
+                        <h6>
+                            0300-8521730
+                        </h6>
+                        </a>
                     </div>
                 </div>
                 <div class="bg-light rounded">

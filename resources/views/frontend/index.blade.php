@@ -3,7 +3,7 @@
 @section('content')
 
         <!-- Carousel Start -->
-        <div class="container-fluid p-0 mb-5">
+        {{-- <div class="container-fluid p-0 mb-5">
             <div class="owl-carousel header-carousel position-relative">
                 @foreach($sliders as $slider)
                     <div class="owl-carousel-item position-relative">
@@ -19,7 +19,6 @@
                                                 {{ $slider->button_name ?? 'Learn More' }}
                                             </a>
                                         @endif
-                                        {{-- <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a> --}}
                                     </div>
                                 </div>
                             </div>
@@ -27,7 +26,7 @@
                     </div>
                 @endforeach
             </div>            
-        </div>
+        </div> --}}
         <!-- Carousel End -->
 
         <!-- About Start -->
@@ -62,7 +61,7 @@
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-12 wow  fadeInUp" data-wow-delay="0.1s">
-                        <h1 class="mb-4">Message by Principal</h1>
+                        <h1 class="mb-4">Principal Message</h1>
                         <div class="row mt-4">
                             <div class="col-md-8 mt-2">
                                 <p class="mb-3 alignPara">

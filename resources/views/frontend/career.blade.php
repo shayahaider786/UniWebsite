@@ -1,4 +1,4 @@
-@extends('frontend.layout.app')
+@extends('frontend.layout.appTwo')
 
 @section('content')
 
@@ -43,7 +43,7 @@
                                   <div class="card-body">
                                     <h5 class="card-title">{{$career->title}}</h5>
                                     <p class="card-text">{{$career->short_description}}</p>
-                                    <a href="{{ route('careerDetail', $career->id) }}" class="btn btn-primary">View more</a>
+                                    <a href="{{ route('careerDetail', $career->id) }}" class="btn btn-primary">Apply Now    </a>
                                 </div>
                                 </div>
                               </div>

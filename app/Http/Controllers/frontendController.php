@@ -51,6 +51,10 @@ class FrontendController extends Controller
     {
         return view('frontend.admisionPolicy');
     }
+    public function scholarship()
+    {
+        return view('frontend.scholarship');
+    }
     public function classes()
     {
         return view('frontend.classes');
