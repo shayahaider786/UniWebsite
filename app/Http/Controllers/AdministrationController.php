@@ -48,56 +48,60 @@ class AdministrationController extends Controller
         return redirect()->route('administration')
                          ->with('success', 'Administration created successfully.');
     }
-    /**
-     * Display the specified resource.
-     */
-    public function show(Administration $administration)
-    {
-        //
-    }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-     // Show the form for editing the specified resource
-     public function edit(Administration $administration)
-     {
-         return view('backend.administrations.edit', compact('administration'));
-     }
+    // Show the form for editing the specified resource
+    public function edit(Administration $administration)
+    {
+        return view('backend.administrations.edit', compact('administration'));
+    }
  
-     // Update the specified resource in storage
-     public function update(Request $request, Administration $administration)
-     {
-         $request->validate([
-             'name' => 'required',
-             'detail' => 'required',
-             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-         ]);
-     
-         $input = $request->all();
-     
-         if ($image = $request->file('image')) {
-             $destinationPath = 'images/';
-             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-             $image->move($destinationPath, $profileImage);
-             $input['image'] = "$profileImage";
-         } else {
-             unset($input['image']);
-         }
-       
-         $administration->update($input);
-     
-         return redirect()->route('administration')
-                          ->with('success', 'Administration updated successfully.');
-     }
+    // Update the specified resource in storage
+    public function update(Request $request, Administration $administration)
+    {
+        $request->validate([
+            'name' => 'required',
+            'detail' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+    
+        $input = $request->all();
+    
+        if ($image = $request->file('image')) {
+            // Delete the old image if it exists
+            if (!empty($administration->image) && file_exists(public_path('images/' . $administration->image))) {
+                unlink(public_path('images/' . $administration->image));
+            }
+    
+            // Upload the new image
+            $destinationPath = 'images/';
+            $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
+            $image->move($destinationPath, $profileImage);
+            $input['image'] = "$profileImage";
+        } else {
+            unset($input['image']);
+        }
+    
+        $administration->update($input);
+    
+        return redirect()->route('administration')
+                         ->with('success', 'Administration updated successfully.');
+    }
+    
  
-     // Remove the specified resource from storage
-     public function destroy(Administration $administration)
-     {
-         $administration->delete();
-     
-         return redirect()->route('administration')
-                          ->with('success', 'Administration deleted successfully.');
-     }
+    // Remove the specified resource from storage
+    public function destroy(Administration $administration)
+    {
+        // Delete the associated image if it exists
+        if (!empty($administration->image) && file_exists(public_path('images/' . $administration->image))) {
+            unlink(public_path('images/' . $administration->image));
+        }
+    
+        // Delete the record
+        $administration->delete();
+    
+        return redirect()->route('administration')
+                         ->with('success', 'Administration deleted successfully.');
+    }
+    
  
 }
