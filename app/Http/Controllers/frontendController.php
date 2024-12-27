@@ -7,6 +7,8 @@ use App\Models\Gallary;
 use App\Models\Student;
 use App\Models\Career;
 use App\Models\Contact;
+use App\Models\JobApplication;
+use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
 
@@ -110,5 +112,26 @@ class FrontendController extends Controller
         Contact::create($validated);
 
         return back()->with('success', 'Message sent successfully!');
+    }
+
+    public function jobApplication(Request $request)
+    {
+        $request->validate([
+            'job_title' => 'required|string|max:255',
+            'name' => 'required|string|max:255',
+            'cv' => 'required|file|mimes:pdf,doc,docx|max:2048', // Validate CV file
+        ]);
+
+        // Store the CV file
+        $cvPath = $request->file('cv')->store('cvs', 'public');
+
+        // Save job application data
+        JobApplication::create([
+            'job_title' => $request->job_title,
+            'name' => $request->name,
+            'cv_path' => $cvPath,
+        ]);
+
+        return back()->with('success', 'Your application has been submitted successfully!');
     }
 }

@@ -47,7 +47,7 @@
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 text-center wow fadeInUp" data-wow-delay="0.5s">
-                        <a href="https://wa.me/923008521730" target="_blank" style="text-decoration: none; color: inherit;">
+                        <a href="https://wa.me/92300-8521730" style="text-decoration: none; color: inherit;">
                         <div class="bg-light rounded-circle d-inline-flex align-items-center justify-content-center mb-4" style="width: 75px; height: 75px;">
                             {{-- <i class="fa fa-phone-alt fa-2x text-primary"></i> --}}
                             <i class="fa-brands fa-whatsapp fa-2x text-primary"></i>

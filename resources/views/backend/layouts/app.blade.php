@@ -80,6 +80,11 @@
                     <span>Careers</span></a>
             </li>
             <li class="nav-item active">
+                <a class="nav-link" href="{{route('getAllJobApplication')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Job Applications</span></a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="{{route('gallaries')}}">
                     {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
                     <span>Gallary</span></a>

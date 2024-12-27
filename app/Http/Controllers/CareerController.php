@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Career;
+use App\Models\JobApplication;
+use Illuminate\Support\Facades\Storage;
 
 class CareerController extends Controller
 {
@@ -70,4 +72,31 @@ class CareerController extends Controller
         return redirect()->route('careers')
         ->with('success', 'Careers Delete successfully.');
     }
+
+    public function getAllJobApplication(){
+        $allApplications  = JobApplication::all();
+        return view('backend.careers.jobApplication', compact('allApplications'));
+    }
+
+
+    public function DeleteAllJobs()
+    {
+        // Retrieve all job applications
+        $jobApplications = JobApplication::all();
+    
+        // Loop through each job application and delete the CV file
+        foreach ($jobApplications as $application) {
+            if (!empty($application->cv_path) && Storage::disk('public')->exists($application->cv_path)) {
+                Storage::disk('public')->delete($application->cv_path);
+            }
+        }
+    
+        // Truncate the table (delete all records)
+        JobApplication::truncate();
+    
+        // Redirect with a success message
+        return redirect()->route('getAllJobApplication')->with('success', 'All Job data and associated CV files deleted successfully.');
+    }
+    
+
 }

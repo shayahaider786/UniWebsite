@@ -567,3 +567,8 @@ h6,
     color: #fff;
     border-color: #fff;
 }
+
+
+.filepond--root .filepond--credits[style] {
+    display: none;
+}

@@ -48,6 +48,7 @@ Route::get('/career', [FrontendController::class, 'allCareer'])->name('allCareer
 Route::get('/career/{id}', [FrontendController::class, 'careerDetail'])->name('careerDetail');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::post('/contact/store', [FrontendController::class, 'contactForm'])->name('contactForm');
+Route::post('/jobaplication', [FrontendController::class, 'jobApplication'])->name('jobApplication');
 
 
 Route::get('/montesari-to-matric-form', [AdmisionController::class, 'matriclationAdmision'])->name('matriclationAdmision');
@@ -95,6 +96,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resource('students', StudentController::class);
     Route::get('/admin/career', [BackendController::class, 'careers'])->name('careers');
     Route::resource('careers', CareerController::class);
+    Route::get('/admin/career/job-application', [CareerController::class, 'getAllJobApplication'])->name('getAllJobApplication');
+    Route::delete('/admin/career/job-application/delete', [CareerController::class, 'DeleteAllJobs'])->name('DeleteAllJobs');
     Route::get('/admin/gallary', [BackendController::class, 'gallaries'])->name('gallaries');
     Route::post('/admin/gallery/post', [BackendController::class, 'gallaryStore'])->name('gallaryStore');
     Route::delete('/admin/gallery/delete/{id}', [BackendController::class, 'gallaryDestroy'])->name('gallaryDestroy');
