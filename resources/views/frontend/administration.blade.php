@@ -28,7 +28,8 @@
                                 <div class="administrationBox text-center col-md-4 mt-5">
                                     <img src="/images/{{ $administration->image }}" width="100%" class="rounded" height="350px" alt="imag">
                                     <h4 class="mt-2">{{$administration->name}}</h4>
-                                    <a href="{{ route('administrationPerson', $administration->slug) }}">Read More</a>
+                                    <p class="">{{ $administration->detail }}</p>
+                                    {{-- <a href="{{ route('administrationPerson', $administration->slug) }}">Read More</a> --}}
                                 </div>
                             @empty
                             <p>There are no Administration</p>

@@ -199,6 +199,68 @@
         <!-- Facilities End -->
 
 
+        <!-- Events Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                    <h1 class="mb-3">Events</h1>
+                    <p>Our facilities include modern amenities designed to support student growth and well-being. These include spacious classrooms, well-equipped libraries, a dedicated video room, and state-of-the-art sports infrastructure.</p>
+                </div>
+                <div class="row bg-light rounded">
+                    <div class="col-md-4 bg-primary">
+                        <div class="wow fadeIn" data-wow-delay="0.5s">
+                            <div class="h-100 d-flex flex-column justify-content-center p-5">
+                                <h3 class="mb-4">Srif Education Events</h3>
+                                <p class="mb-4 text-white">What’s happening on campus</p>
+                                <a class="btn btn-primary py-3 px-5" href="{{route('events')}}">All Events<i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div id="eventCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                @forelse ($events->chunk(3) as $chunkIndex => $chunk) <!-- Show events in chunks of 8 -->
+                                    <div class="carousel-item @if($chunkIndex === 0) active @endif">
+                                        <div class="row">
+                                            @foreach ($chunk as $event)
+                                                <div class="col-md-4 mb-4 pt-3"> <!-- Adjust size as per your design -->
+                                                    <a href="{{route('eventsById' , $event->id)}}">
+                                                        <div class="card">
+                                                            <img src="{{ $event->image_urls[0] }}" class="card-img-top" alt="Event Image" height="150px">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">{{ $event->name }}</h5>
+                                                                <p class="card-text text-dark">{{ Str::limit($event->description, 20) }}</p>
+                                                                <p class="text-secondary"><strong>Date:</strong> {{ \Carbon\Carbon::parse($event->event_date)->format('M d, Y') }}</p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    @empty
+                                @endforelse
+                            </div>
+                    
+                            <!-- Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#eventCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#eventCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+        <!-- Facilities End -->
+
+
+
+
         <!-- Call To Action Start -->
         {{-- <div class="container-xxl py-5">
             <div class="container">

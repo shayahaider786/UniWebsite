@@ -8,6 +8,7 @@ use App\Models\Student;
 use App\Models\Career;
 use App\Models\Contact;
 use App\Models\JobApplication;
+use App\Models\Event;
 use Illuminate\Support\Facades\Storage;
 
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class FrontendController extends Controller
     public function index()
     {
         $sliders = Slider::paginate(10); // Adjust the number as needed
-        return view('frontend.index', compact('sliders'));
+        $events = Event::latest()->get(); // Adjust the number as needed
+        return view('frontend.index', compact('sliders','events'));
     }
     public function about()
     {
@@ -133,5 +135,15 @@ class FrontendController extends Controller
         ]);
 
         return back()->with('success', 'Your application has been submitted successfully!');
+    }
+
+    public function events(){
+        $events = Event::latest()->get(); // Adjust the number as needed
+        return view('frontend.events', compact('events'));
+    }
+
+    public function eventsById($id){
+        $event = Event::where('id', $id)->first();
+        return view('frontend.eventById', compact('event'));
     }
 }

@@ -90,6 +90,11 @@
                     <span>Gallary</span></a>
             </li>
             <li class="nav-item active">
+                <a class="nav-link" href="{{route('events.index')}}">
+                    {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
+                    <span>Events</span></a>
+            </li>
+            <li class="nav-item active">
                 <a class="nav-link" href="{{route('allContactData')}}">
                     {{-- <i class="fas fa-fw fa-tachometer-alt"></i> --}}
                     <span>Contact Us</span></a>

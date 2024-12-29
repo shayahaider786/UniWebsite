@@ -9,6 +9,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\AdmisionController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\CareerController;
+use App\Http\Controllers\EventController;
 
 
 use App\Http\Controllers\Auth\LoginController;
@@ -49,6 +50,8 @@ Route::get('/career/{id}', [FrontendController::class, 'careerDetail'])->name('c
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::post('/contact/store', [FrontendController::class, 'contactForm'])->name('contactForm');
 Route::post('/jobaplication', [FrontendController::class, 'jobApplication'])->name('jobApplication');
+Route::get('/all-events', [FrontendController::class, 'events'])->name('events');
+Route::get('/all-events/{id}', [FrontendController::class, 'eventsById'])->name('eventsById');
 
 
 Route::get('/montesari-to-matric-form', [AdmisionController::class, 'matriclationAdmision'])->name('matriclationAdmision');
@@ -103,6 +106,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::delete('/admin/gallery/delete/{id}', [BackendController::class, 'gallaryDestroy'])->name('gallaryDestroy');
     Route::get('/admin/contact-us', [BackendController::class, 'allContactData'])->name('allContactData');
     Route::delete('/admin/contact/{id}', [BackendController::class, 'contactDestroy'])->name('contactDestroy');
+
+    Route::resource('events', EventController::class);
 
 });
 

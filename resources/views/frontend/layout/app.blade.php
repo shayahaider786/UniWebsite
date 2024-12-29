@@ -94,16 +94,16 @@
 
 
                         @guest
-                        @if (Route::has('login'))
-                            <li class="nav-item">
-                                <a class="nav-link d-none" href="{{ route('login') }}">login</a>
+                            @if (Route::has('login'))
+                                <li class="nav-item">
+                                    <a class="nav-link d-none" href="{{ route('login') }}">login</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a  class="nav-link" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-gauge"></i></a>
                             </li>
-                        @endif
-                    @else
-                        <li class="nav-item dropdown">
-                            <a  class="nav-link" href="{{route('admin.dashboard')}}"><i class="fa-solid fa-gauge"></i></a>
-                        </li>
-                    @endguest
+                        @endguest
                     </div>
                 </div>
             </nav>
