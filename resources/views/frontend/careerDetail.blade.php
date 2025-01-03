@@ -54,9 +54,9 @@
                                                         {{-- <input type="file" class="form-control border-0" id="cv" name="cv" required> --}}
                                                         <div class="mb-3">
                                                             <label for="cv">CV</label>
-                                                            {{-- <label for="formFile" class="form-label">CV</label> --}}
-                                                            <input class="form-control form-control-lg" type="file" id="cv"  name="cv">
-                                                          </div>
+                                                            <input class="form-control form-control-lg" type="file" id="cv" name="cv" accept="application/pdf">
+                                                            <div id="error-message" style="color: red; display: none; margin-top: 5px;">Please upload a valid PDF file.</div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -76,4 +76,19 @@
         </div>
         <!-- About End -->
 
+
+        <script>
+            const cvInput = document.getElementById('cv');
+            const errorMessage = document.getElementById('error-message');
+        
+            cvInput.addEventListener('change', function () {
+                const file = this.files[0];
+                if (file && file.type !== 'application/pdf') {
+                    errorMessage.style.display = 'block';
+                    cvInput.value = ''; // Reset the input
+                } else {
+                    errorMessage.style.display = 'none';
+                }
+            });
+        </script>
 @endsection

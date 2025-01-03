@@ -210,7 +210,7 @@
                     <div class="col-md-4 bg-primary">
                         <div class="wow fadeIn" data-wow-delay="0.5s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h3 class="mb-4">Srif Education Events</h3>
+                                <h3 class="mb-4">Events</h3>
                                 <p class="mb-4 text-white">What’s happening on campus</p>
                                 <a class="btn btn-primary py-3 px-5" href="{{route('events')}}">All Events<i class="fa fa-arrow-right ms-2"></i></a>
                             </div>

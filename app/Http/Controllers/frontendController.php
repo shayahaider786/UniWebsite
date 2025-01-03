@@ -91,10 +91,10 @@ class FrontendController extends Controller
         $careers = Career::all();
         return view('frontend.career',compact('careers'));
     }
-    public function careerDetail($id)
+    public function careerDetail($title)
     {
         // Fetch the career by its ID or fail gracefully if not found
-        $career = Career::where('id', $id)->firstOrFail();
+        $career = Career::where('title', $title)->firstOrFail();
         
         // Pass the data to the view
         return view('frontend.careerDetail', compact('career'));
@@ -123,10 +123,10 @@ class FrontendController extends Controller
             'name' => 'required|string|max:255',
             'cv' => 'required|file|mimes:pdf,doc,docx|max:2048', // Validate CV file
         ]);
-
-        // Store the CV file
-        $cvPath = $request->file('cv')->store('cvs', 'public');
-
+ 
+        // Get the original file name and store the CV file
+        $originalFileName = $request->file('cv')->getClientOriginalName();
+        $cvPath = $request->file('cv')->storeAs('cvs', $originalFileName, 'public');
         // Save job application data
         JobApplication::create([
             'job_title' => $request->job_title,

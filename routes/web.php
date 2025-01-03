@@ -46,7 +46,7 @@ Route::get('/fee-structure', [FrontendController::class, 'feeStructure'])->name(
 Route::get('/shining-star', [FrontendController::class, 'studentStar'])->name('studentStar');
 Route::get('/student-timing', [FrontendController::class, 'studentTiming'])->name('studentTiming');
 Route::get('/career', [FrontendController::class, 'allCareer'])->name('allCareer');
-Route::get('/career/{id}', [FrontendController::class, 'careerDetail'])->name('careerDetail');
+Route::get('/career/{title}', [FrontendController::class, 'careerDetail'])->name('careerDetail');
 Route::get('/contact', [FrontendController::class, 'contact'])->name('contact');
 Route::post('/contact/store', [FrontendController::class, 'contactForm'])->name('contactForm');
 Route::post('/jobaplication', [FrontendController::class, 'jobApplication'])->name('jobApplication');

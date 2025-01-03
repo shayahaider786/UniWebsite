@@ -25,12 +25,22 @@
                         <h1 class="mb-4 text-center">Administration</h1>
                         <div class="row">
                             @forelse ($administrations as $administration)
-                                <div class="administrationBox text-center col-md-4 mt-5">
+                            {{-- todo vertical administration  --}}
+                                <div class="administrationBox col-md-12 mt-5 d-flex justify-content-start">
+                                    <div class="w-25">
+                                        <img src="/images/{{ $administration->image }}" width="90%" class="rounded" height="250px" alt="imag">
+                                    </div>
+                                    <div class="w-75">
+                                        <h4 class="">{{$administration->name}}</h4>
+                                        <p class="alignPara">{{ $administration->detail }}</p>
+                                    </div>
+                                </div>
+
+                               {{-- <div class="administrationBox text-center col-md-4 mt-5">
                                     <img src="/images/{{ $administration->image }}" width="100%" class="rounded" height="350px" alt="imag">
                                     <h4 class="mt-2">{{$administration->name}}</h4>
                                     <p class="">{{ $administration->detail }}</p>
-                                    {{-- <a href="{{ route('administrationPerson', $administration->slug) }}">Read More</a> --}}
-                                </div>
+                                </div> --}}
                             @empty
                             <p>There are no Administration</p>
                             @endforelse
@@ -43,4 +53,12 @@
 
 
 
+
+
+        {{-- <div class="administrationBox text-center col-md-4 mt-5">
+            <img src="/images/{{ $administration->image }}" width="100%" class="rounded" height="350px" alt="imag">
+            <h4 class="mt-2">{{$administration->name}}</h4>
+            <p class="">{{ $administration->detail }}</p>
+            <a href="{{ route('administrationPerson', $administration->slug) }}">Read More</a>
+        </div> --}}
 @endsection

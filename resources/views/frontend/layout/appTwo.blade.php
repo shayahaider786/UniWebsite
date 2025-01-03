@@ -132,22 +132,22 @@
                         <h3 class="text-white mb-4">Photo Gallery</h3>
                         <div class="row g-2 pt-2">
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img4.png" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img4.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img5.png" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img5.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img6.png" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img6.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img9.png" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img9.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img10.png" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img10.png" alt="">
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img12.png" alt="">
+                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img12.png" alt="">
                             </div>
                         </div>
                     </div>
