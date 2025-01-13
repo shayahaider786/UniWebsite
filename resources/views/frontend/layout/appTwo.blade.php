@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>SEC</title>
+    <title>Sharif Education Complex</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -125,40 +125,59 @@
                         <a class="btn btn-link text-white-50" href="{{route('about')}}">About Us</a>
                         <a class="btn btn-link text-white-50" href="{{route('contact')}}">Contact Us</a>
                         <a class="btn btn-link text-white-50" href="{{route('admisionPolicy')}}">Admission</a>
-                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="{{route('allCareer')}}">Career</a>
                         <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Usefull Links</h3>
+                        <a class="btn btn-link text-white-50" href="{{route('admisionPolicy')}}">Admission Policy</a>
+                        <a class="btn btn-link text-white-50" href="{{route('scholarship')}}">Scholarships</a>
+                        <a class="btn btn-link text-white-50" href="{{route('howToApply')}}">How To Apply</a>
+                        <a class="btn btn-link text-white-50" href="{{route('feeStructure')}}">Fee Structure</a>
+                        <a class="btn btn-link text-white-50" href="{{route('studentStar')}}">Students</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Photo Gallery</h3>
                         <div class="row g-2 pt-2">
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img4.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img4.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img5.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img5.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img6.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img6.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img9.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img9.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img10.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img10.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img12.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img12.png" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    {{-- <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        {{-- <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p> --}}
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             {{-- <div class="container">

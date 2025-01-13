@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>SEC</title>
+    <title>Sharif Education Complex</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -48,7 +48,7 @@
 
         <div class="container-fluid position-relative p-0">
             <!-- Navbar Start -->
-            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-lg-0 position-absolute w-100" style="z-index: 10; background-color: rgba(0, 0, 0, 0.5);">
+            <nav class="navbar navbar-expand-lg navbar-dark px-4 px-lg-5 py-lg-0 position-absolute w-100" style="z-index: 10; background-color: rgba(0, 0, 0, 0.5);">
                 <a href="{{route('index')}}" class="navbar-brand w-25">
                     <img src="/frontend/img/assets/logo3.png" alt="logo" class="logoImg">
                 </a>
@@ -149,9 +149,7 @@
                         <h3 class="text-white mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sharif Complex, Jati Umrah, <span class="ms-4">Lahore</span></p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>042 378 60308-10</p>
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@sharif.edu.pk" target="_blank" style="text-decoration: none; color: inherit;">
-                            <p class="mb-2"><i class="fa fa-envelope me-3"></i>hr@sharif.edu.pk</p>
-                        </a>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>hr@sharif.edu.pk</p>
                         <div class="d-flex pt-2">
                             {{-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> --}}
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/SharifEducationComplex" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -165,40 +163,59 @@
                         <a class="btn btn-link text-white-50" href="{{route('about')}}">About Us</a>
                         <a class="btn btn-link text-white-50" href="{{route('contact')}}">Contact Us</a>
                         <a class="btn btn-link text-white-50" href="{{route('admisionPolicy')}}">Admission</a>
-                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
+                        <a class="btn btn-link text-white-50" href="{{route('allCareer')}}">Career</a>
                         <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <h3 class="text-white mb-4">Usefull Links</h3>
+                        <a class="btn btn-link text-white-50" href="{{route('admisionPolicy')}}">Admission Policy</a>
+                        <a class="btn btn-link text-white-50" href="{{route('scholarship')}}">Scholarships</a>
+                        <a class="btn btn-link text-white-50" href="{{route('howToApply')}}">How To Apply</a>
+                        <a class="btn btn-link text-white-50" href="{{route('feeStructure')}}">Fee Structure</a>
+                        <a class="btn btn-link text-white-50" href="{{route('studentStar')}}">Students</a>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Photo Gallery</h3>
                         <div class="row g-2 pt-2">
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img4.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img4.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img5.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img5.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img6.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img6.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img9.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img9.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img10.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img10.png" alt="">
+                                </a>
                             </div>
                             <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="frontend/img/assets/img12.png" alt="">
+                                <a href="{{route('allGallary')}}">
+                                    <img class="img-fluid rounded bg-light p-1" src="/frontend/img/assets/img12.png" alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    {{-- <div class="col-lg-3 col-md-6">
                         <h3 class="text-white mb-4">Newsletter</h3>
-                        {{-- <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p> --}}
                         <div class="position-relative mx-auto" style="max-width: 400px;">
                             <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
                             <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             {{-- <div class="container">
@@ -223,6 +240,7 @@
             </div> --}}
         </div>
         <!-- Footer End -->
+
 
 
         <!-- Back to Top -->
