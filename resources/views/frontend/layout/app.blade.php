@@ -149,7 +149,7 @@
                         <h3 class="text-white mb-4">Get In Touch</h3>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Sharif Complex, Jati Umrah, <span class="ms-4">Lahore</span></p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>042 378 60308-10</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>hr@sharif.edu.pk</p>
+                        <p class="mb-2"><a style="color:rgba(255, 255, 255, 0.5);" href="https://mail.google.com/mail/?view=cm&fs=1&to=hr@sharif.edu.pk"><i class="fa fa-envelope me-3"></i>hr@sharif.edu.pk</a></p>
                         <div class="d-flex pt-2">
                             {{-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a> --}}
                             <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/SharifEducationComplex" target="_blank"><i class="fab fa-facebook-f"></i></a>

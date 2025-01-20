@@ -32,7 +32,7 @@
                                     {{-- <div class="col-md-4 mb-3"> <!-- Each image in col-md-4 -->
                                         <img src="{{ asset('storage/' . $image) }}" alt="Event Image" class="img-fluid rounded w-100">
                                     </div> --}}
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4 mb-3">
                                         <a href="{{ asset('/' . $image) }}" data-lightbox="gallery" data-title="event Image">
                                             <img src="{{ asset('/' . $image) }}" class="card-img-top rounded" alt="gallery Image" width="100%" height="300px">
                                         </a>
