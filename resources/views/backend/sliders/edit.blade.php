@@ -87,7 +87,7 @@
                     @enderror
                     <div class="mt-2">
                         <strong>Current Image:</strong><br>
-                        <img src="{{ asset('storage/' . $slider->image) }}" alt="Current Slider Image" width="150">
+                        <img src="{{ asset('/' . $slider->image) }}" alt="Current Slider Image" width="150">
                     </div>
                 </div>
 

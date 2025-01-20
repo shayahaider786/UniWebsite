@@ -42,7 +42,7 @@
                                     <td>
                                         @if ($event->images)
                                             @foreach ($event->images as $image)
-                                                <img src="{{ asset('storage/' . $image) }}" alt="Event Image" width="50" class="mr-2">
+                                                <img src="{{ asset('/' . $image) }}" alt="Event Image" width="50" class="mr-2">
                                             @endforeach
                                         @endif
                                     </td>

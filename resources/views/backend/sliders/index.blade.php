@@ -44,7 +44,7 @@
                                 @forelse($sliders as $slider)
                                     <tr>
                                         <td>
-                                            <img src="{{ asset('storage/' . $slider->image) }}" alt="Slider Image" width="80%" class="img-thumbnail">
+                                            <img src="{{ asset('/' . $slider->image) }}" alt="Slider Image" width="80%" class="img-thumbnail">
                                         </td>
                                         <td>{{ $slider->title }}</td>
                                         <td>{{ Str::limit($slider->paragraph, 30) }}</td>

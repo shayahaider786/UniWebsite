@@ -23,8 +23,8 @@
             <h1 class="mb-4 text-center">Gallary</h1>
                 @foreach($gallaries as $gallary)
                     <div class="col-lg-4">
-                        <a href="{{ asset('storage/' . $gallary->image_path) }}" data-lightbox="gallery" data-title="Portfolio Image">
-                            <img src="{{ asset('storage/' . $gallary->image_path) }}" class="card-img-top rounded" alt="gallery Image" width="100%" height="300px">
+                        <a href="{{ asset('/' . $gallary->image_path) }}" data-lightbox="gallery" data-title="Portfolio Image">
+                            <img src="{{ asset('/' . $gallary->image_path) }}" class="card-img-top rounded" alt="gallery Image" width="100%" height="300px">
                         </a>
                     </div>
                 @endforeach

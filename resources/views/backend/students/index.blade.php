@@ -43,7 +43,7 @@
                                 @forelse($students as $student)
                                     <tr>
                                         <td>
-                                            <img src="{{ asset('storage/' . $student->image) }}" alt="Slider Image" width="30%">
+                                            <img src="{{ asset('/' . $student->image) }}" alt="Slider Image" width="30%">
                                         </td>
                                         <td>{{ $student->name }}</td>
                                         <td>{{ $student->description }}</td>

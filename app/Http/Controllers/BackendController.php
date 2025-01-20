@@ -173,14 +173,27 @@ class BackendController extends Controller
         ]);
     
         foreach ($request->file('images') as $image) {
-            $path = $image->store('portfolio', 'public');
+            // Generate a unique name for the image
+            $imageName = time() . rand(1, 1000) . '.' . $image->getClientOriginalExtension();
     
+            // Define the destination path in the public folder
+            $imagePath = public_path('uploads/portfolio');
+            
+            // Make sure the directory exists
+            if (!file_exists($imagePath)) {
+                mkdir($imagePath, 0755, true);
+            }
+    
+            // Move the image to the public folder
+            $image->move($imagePath, $imageName);
+    
+            // Save the relative path in the database
             Gallary::create([
-                'image_path' => $path,
+                'image_path' => 'uploads/portfolio/' . $imageName,
             ]);
         }
     
-        return redirect()->route('gallaries')->with('success', 'Gallary uploaded successfully.');
+        return redirect()->route('gallaries')->with('success', 'Gallery uploaded successfully.');
     }
     
     public function gallaryDestroy($id){

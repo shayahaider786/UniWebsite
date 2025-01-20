@@ -25,7 +25,7 @@
                     @foreach ($students as $student)
                     <div class="d-flex align-items-center justify-content-evenly mt-5">
                         <div class="w-25">
-                            <img src="{{ asset('storage/' . $student->image) }}" width="60%" class="rounded" alt="{{ $student->name }}">
+                            <img src="{{ asset('/' . $student->image) }}" width="60%" class="rounded" alt="{{ $student->name }}">
                         </div>
                         <div class="w-75">
                             <h3>{{$student->name}}</h3>

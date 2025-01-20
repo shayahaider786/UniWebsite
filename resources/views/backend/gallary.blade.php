@@ -44,7 +44,7 @@
                             <div class="col-md-4 mb-3">
                                 <div class="card">
                                     <div class="position-relative">
-                                    <img src="{{ asset('storage/' . $gallary->image_path) }}" class="card-img-top object-fit-cover" alt="Portfolio Image" width="100%" height="300px">
+                                    <img src="{{ asset('/' . $gallary->image_path) }}" class="card-img-top object-fit-cover" alt="Portfolio Image" width="100%" height="300px">
                                     <a class="position-absolute top-0 end-0 bg-dark py-1 px-2 rounded-circle text-danger">
                                         <form action="{{ route('gallaryDestroy', $gallary->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this item?');">
                                             @csrf

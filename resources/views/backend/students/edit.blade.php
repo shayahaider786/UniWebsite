@@ -64,7 +64,7 @@
                         name="image" 
                         class="form-control @error('image') is-invalid @enderror" 
                         id="inputImage">
-                    <img src="{{ asset('storage/' . $student->image) }}" width="20%">
+                    <img src="{{ asset('/' . $student->image) }}" width="20%">
                     @error('image')
                         <div class="form-text text-danger">{{ $message }}</div>
                     @enderror

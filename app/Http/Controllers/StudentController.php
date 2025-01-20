@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\File;
 
 class StudentController extends Controller
 {
@@ -31,13 +30,30 @@ class StudentController extends Controller
 
         // Handle file upload
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('students', 'public');
+            // Generate a unique name for the image
+            $image = $request->file('image');
+            $imageName = time() . rand(1, 1000) . '.' . $image->getClientOriginalExtension();
+
+            // Define the destination path in the public folder
+            $imagePath = public_path('uploads/students');
+            
+            // Make sure the directory exists
+            if (!File::exists($imagePath)) {
+                File::makeDirectory($imagePath, 0755, true);
+            }
+
+            // Move the image to the public folder
+            $image->move($imagePath, $imageName);
+
+            // Store the relative path to the image
+            $validated['image'] = 'uploads/students/' . $imageName;
         }
 
+        // Create the student record
         $student = Student::create($validated);
 
         return redirect()->route('students')
-                         ->with('success', 'Students created successfully.');
+                         ->with('success', 'Student created successfully.');
     }
 
     /**
@@ -51,7 +67,7 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request,Student $student)
+    public function update(Request $request, Student $student)
     {
         $validated = $request->validate([
             'name' => 'required|string|max:255',
@@ -62,14 +78,35 @@ class StudentController extends Controller
 
         // Handle file upload
         if ($request->hasFile('image')) {
-            $validated['image'] = $request->file('image')->store('students', 'public');
+            // Delete the old image if it exists
+            if ($student->image && file_exists(public_path($student->image))) {
+                unlink(public_path($student->image));
+            }
+
+            // Generate a unique name for the new image
+            $image = $request->file('image');
+            $imageName = time() . rand(1, 1000) . '.' . $image->getClientOriginalExtension();
+
+            // Define the destination path in the public folder
+            $imagePath = public_path('uploads/students');
+            
+            // Make sure the directory exists
+            if (!File::exists($imagePath)) {
+                File::makeDirectory($imagePath, 0755, true);
+            }
+
+            // Move the new image to the public folder
+            $image->move($imagePath, $imageName);
+
+            // Store the relative path to the new image
+            $validated['image'] = 'uploads/students/' . $imageName;
         }
 
+        // Update the student record
         $student->update($validated);
 
         return redirect()->route('students')
-        ->with('success', 'Students Update successfully.');
-
+                         ->with('success', 'Student updated successfully.');
     }
 
     /**
@@ -77,16 +114,15 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-       // Check if the student has an image
-        if ($student->image) {
-            // Delete the image from storage
-            Storage::disk('public')->delete($student->image);
+        // Check if the student has an image and delete it
+        if ($student->image && file_exists(public_path($student->image))) {
+            unlink(public_path($student->image));
         }
 
         // Delete the student record
         $student->delete();
-        
+
         return redirect()->route('students')
-        ->with('success', 'Students Delete successfully.');
+                         ->with('success', 'Student deleted successfully.');
     }
 }

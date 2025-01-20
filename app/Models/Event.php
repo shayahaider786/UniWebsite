@@ -30,6 +30,7 @@ class Event extends Model
     protected $casts = [
         'images' => 'array', // Cast the 'images' column as an array
     ];
+    protected $appends = ['image_urls'];
 
     /**
      * Accessor to get full image URLs.
@@ -38,12 +39,11 @@ class Event extends Model
      */
     public function getImageUrlsAttribute()
     {
-        if (!$this->images) {
-            return [];
+        $imageUrls = [];
+        foreach ($this->images as $imagePath) {
+            $imageUrls[] = url($imagePath); // Make sure the URL is correct
         }
 
-        return array_map(function ($image) {
-            return asset('storage/' . $image);
-        }, $this->images);
+        return $imageUrls;
     }
 }
